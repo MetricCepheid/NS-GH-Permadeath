@@ -1636,7 +1636,7 @@ script setup_user_option_tags
 				lefty_flip_p1 = 0
 				lefty_flip_p2 = 0
 				lag_calibration = 0.0
-				autosave = 0
+				autosave = 1
 				resting_whammy_position_device_0 = -0.76
 				resting_whammy_position_device_1 = -0.76
 				resting_whammy_position_device_2 = -0.76
@@ -1657,13 +1657,14 @@ script setup_user_option_tags
 				online_num_songs = 0
 				online_tie_breaker = 0
 				online_highway = 0
-				unlock_Cheat_AirGuitar = 1
-				unlock_Cheat_PerformanceMode = 1
-				unlock_Cheat_Hyperspeed = 1
-				unlock_Cheat_NoFail = 0
-				unlock_Cheat_EasyExpert = 0
-				unlock_Cheat_PrecisionMode = 1
-				unlock_Cheat_BretMichaels = 1
+				unlock_cheat_airguitar = 1
+				unlock_cheat_performancemode = 1
+				unlock_cheat_hyperspeed = 1
+				unlock_cheat_nofail = 0
+				unlock_cheat_easyexpert = 0
+				unlock_cheat_precisionmode = 0
+				unlock_cheat_largegems = 1
+				unlock_cheat_bretmichaels = 1
 			}}
 	endif
 endscript
