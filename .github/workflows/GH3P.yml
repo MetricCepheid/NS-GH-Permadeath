@@ -58,8 +58,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Comment
-        run: echo GH3-PS3 will eventually go here when I can get it to build properly.
       - name: Packages
         run: |
           sudo dpkg --add-architecture i386
