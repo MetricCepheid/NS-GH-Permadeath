@@ -39,8 +39,9 @@ jobs:
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '../COMPILED_PC'
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '../COMPILED_PC'
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '../COMPILED_PC'
-          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath
-          mv GH3/bgh3-permadeath/DATA COMPILED_PC
+
+      - name: move files in a separate command strip thingy majig
+        run: cp -R GH3/bgh3-permadeath/DATA COMPILED_PC/DATA
       
       - name: Upload release attachment
         uses: actions/upload-artifact@v4
