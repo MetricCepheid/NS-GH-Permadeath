@@ -1586,43 +1586,86 @@ script destroy_intro
 endscript
 
 script setup_user_option_tags 
-	SetGlobalTags \{user_options
-		params = {
-			guitar_volume = 11
-			band_volume = 11
-			sfx_volume = 11
-			lefty_flip_p1 = 0
-			lefty_flip_p2 = 0
-			lag_calibration = 0.0
-			autosave = 0
-			resting_whammy_position_device_0 = -0.76
-			resting_whammy_position_device_1 = -0.76
-			resting_whammy_position_device_2 = -0.76
-			resting_whammy_position_device_3 = -0.76
-			resting_whammy_position_device_4 = -0.76
-			resting_whammy_position_device_5 = -0.76
-			resting_whammy_position_device_6 = -0.76
-			star_power_position_device_0 = -1.0
-			star_power_position_device_1 = -1.0
-			star_power_position_device_2 = -1.0
-			star_power_position_device_3 = -1.0
-			star_power_position_device_4 = -1.0
-			star_power_position_device_5 = -1.0
-			star_power_position_device_6 = -1.0
-			gamma_brightness = 5
-			online_game_mode = 0
-			online_difficulty = 0
-			online_num_songs = 0
-			online_tie_breaker = 0
-			online_highway = 0
-			unlock_Cheat_AirGuitar = 1
-			unlock_Cheat_PerformanceMode = 1
-			unlock_Cheat_Hyperspeed = 1
-			unlock_Cheat_NoFail = 0
-			unlock_Cheat_EasyExpert = 0
-			unlock_Cheat_PrecisionMode = 1
-			unlock_Cheat_BretMichaels = 1
-		}}
+	if iswinport
+		setglobaltags \{user_options
+			params = {
+				guitar_volume = 11
+				band_volume = 11
+				sfx_volume = 11
+				lefty_flip_p1 = 0
+				lefty_flip_p2 = 0
+				lag_calibration = 0.0
+				lag_audio = 0.0
+				lag_video = 0.0
+				autosave = 1
+				resting_whammy_position_device_0 = -0.76
+				resting_whammy_position_device_1 = -0.76
+				resting_whammy_position_device_2 = -0.76
+				resting_whammy_position_device_3 = -0.76
+				resting_whammy_position_device_4 = -0.76
+				resting_whammy_position_device_5 = -0.76
+				resting_whammy_position_device_6 = -0.76
+				star_power_position_device_0 = -1.0
+				star_power_position_device_1 = -1.0
+				star_power_position_device_2 = -1.0
+				star_power_position_device_3 = -1.0
+				star_power_position_device_4 = -1.0
+				star_power_position_device_5 = -1.0
+				star_power_position_device_6 = -1.0
+				gamma_brightness = 5
+				online_game_mode = 0
+				online_difficulty = 0
+				online_num_songs = 0
+				online_tie_breaker = 0
+				online_highway = 0
+				unlock_cheat_airguitar = 1
+				unlock_cheat_performancemode = 1
+				unlock_cheat_hyperspeed = 1
+				unlock_cheat_nofail = 0
+				unlock_cheat_easyexpert = 0
+				unlock_cheat_precisionmode = 0
+				unlock_cheat_largegems = 1
+				unlock_cheat_bretmichaels = 1
+			}}
+	else
+		SetGlobalTags \{user_options
+			params = {
+				guitar_volume = 11
+				band_volume = 11
+				sfx_volume = 11
+				lefty_flip_p1 = 0
+				lefty_flip_p2 = 0
+				lag_calibration = 0.0
+				autosave = 0
+				resting_whammy_position_device_0 = -0.76
+				resting_whammy_position_device_1 = -0.76
+				resting_whammy_position_device_2 = -0.76
+				resting_whammy_position_device_3 = -0.76
+				resting_whammy_position_device_4 = -0.76
+				resting_whammy_position_device_5 = -0.76
+				resting_whammy_position_device_6 = -0.76
+				star_power_position_device_0 = -1.0
+				star_power_position_device_1 = -1.0
+				star_power_position_device_2 = -1.0
+				star_power_position_device_3 = -1.0
+				star_power_position_device_4 = -1.0
+				star_power_position_device_5 = -1.0
+				star_power_position_device_6 = -1.0
+				gamma_brightness = 5
+				online_game_mode = 0
+				online_difficulty = 0
+				online_num_songs = 0
+				online_tie_breaker = 0
+				online_highway = 0
+				unlock_Cheat_AirGuitar = 1
+				unlock_Cheat_PerformanceMode = 1
+				unlock_Cheat_Hyperspeed = 1
+				unlock_Cheat_NoFail = 0
+				unlock_Cheat_EasyExpert = 0
+				unlock_Cheat_PrecisionMode = 1
+				unlock_Cheat_BretMichaels = 1
+			}}
+	endif
 endscript
 
 script create_using_guitar_controller_menu 
