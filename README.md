@@ -15,7 +15,7 @@ Simply place the patch in your DLC folder (`/Hdd1/Content/0000000000000000/41560
 Grab your region's PKG file (NTSC or PAL) and install the permadeath patch. Any DLC or customs currently installed will be ignored by the patch. To play them again, simply delete or move the Permadeath patch.
 
 ### PC
-For PC, notes will eventually go here
+For PC, notes will eventually go here\n
 **REQUIRES AND IS ONLY COMPATIBLE WITH THE LATEST BETTERGH3**
 
 
