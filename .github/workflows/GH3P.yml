@@ -126,7 +126,7 @@ jobs:
 
       - name: onyx-cli compile
         run: |
-          cd ~/GitProjects/NS-GH-Permadeath-local
+          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath
           chmod u+x ./onyx-20251011-linux-x64.AppImage
           mkdir ./COMPILED_360
           ./onyx-20251011-linux-x64.AppImage stfs ./STFS --to ./COMPILED_360/GH3X360PERMADEATH
