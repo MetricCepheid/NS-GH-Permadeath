@@ -6,10 +6,6 @@ GH3/STFS/dl2000000000.pak.xen
 GH3/ps3.sh
 GH3/xbox.sh
 GH3/*_strings.q
-*.pkg
-*.PAK*
-*.pak*
-*.xen
 !GH3/STFS/*
 !GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/*
 !GH3/PKG_PAL/USRDIR/GH3 PERMADEATH PATCH/*
