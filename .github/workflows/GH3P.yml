@@ -33,12 +33,12 @@ jobs:
           ./Honeycomb pak compile '../GH3/dl2000000001_text_g' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
           ./Honeycomb pak compile '../GH3/dl2000000001_text_i' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
           ./Honeycomb pak compile '../GH3/dl2000000001_text_s' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch' -g GH3 -c PC -o '../COMPILED'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text' -g GH3 -c PC -o '../COMPILED'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_f' -g GH3 -c PC -o '../COMPILED'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '../COMPILED'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '../COMPILED'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '../COMPILED'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch' -g GH3 -c PC -o '../COMPILED_PC'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text' -g GH3 -c PC -o '../COMPILED_PC'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_f' -g GH3 -c PC -o '../COMPILED_PC'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '../COMPILED_PC'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '../COMPILED_PC'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '../COMPILED_PC'
           cd ..
       
       - name: Upload release attachment
