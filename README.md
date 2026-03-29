@@ -16,7 +16,7 @@ Grab your region's PKG file (NTSC or PAL) and install the permadeath patch. Any 
 
 ### PC
 For PC, notes will eventually go here <br />
-**REQUIRES AND IS ONLY COMPATIBLE WITH THE LATEST BETTERGH3**
+**REQUIRES AND IS ONLY COMPATIBLE WITH THE LATEST [BETTERGH3](<https://neverhax.com>)**
 
 
 ## Compilation Instructions
