@@ -96,9 +96,44 @@ jobs:
           retention-days: 30
 
 
-  xthreesixty:
+  x360:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Comment
-        run: echo GH3-X360 will eventually go here when I can get it to build properly.
+
+      - name: Packages
+        run: |
+          sudo apt install p7zip-full libfuse2
+      
+      - name: Pull Honeycomb-CLI && onyx-cli binary package
+        run: |
+          curl -LO https://github.com/AddyMills/Honeycomb-CLI/releases/download/20251010/Honeycomb-Linux-x64-2025-10-10_Release.7z
+          curl -LO https://github.com/mtolly/onyx/releases/download/20251011/onyx-20251011-linux-x64.AppImage
+          7z x Honeycomb-Linux-x64-2025-10-10_Release.7z
+
+      - name: Honeycomb compile
+        run: |
+          cd Honeycomb-Linux-x64
+          chmod u+x ./Honeycomb
+          cp -R ../GH3/STFS ../STFS
+          ./Honeycomb pak compile '../GH3/dl2000000001' -g GH3 -c 360 && mv '../GH3/dl2000000001.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c 360 && mv '../GH3/dl2000000001_pc.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text' -g GH3 -c 360 && mv '../GH3/dl2000000001_text.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_f' -g GH3 -c 360 && mv '../GH3/dl2000000001_text_f.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_g' -g GH3 -c 360 && mv '../GH3/dl2000000001_text_g.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_s' -g GH3 -c 360 && mv '../GH3/dl2000000001_text_s.pak.xen' '../STFS'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_i' -g GH3 -c 360 && mv '../GH3/dl2000000001_text_i.pak.xen' '../STFS'
+
+      - name: onyx-cli compile
+        run: |
+          cd ~/GitProjects/NS-GH-Permadeath-local
+          chmod u+x ./onyx-20251011-linux-x64.AppImage
+          mkdir ./COMPILED_360
+          ./onyx-20251011-linux-x64.AppImage stfs ./STFS --to ./COMPILED_360/GH3X360PERMADEATH
+
+      - name: Upload release attachment
+        uses: actions/upload-artifact@v4
+        with:
+          name: GH3-360-Permadeath
+          path: ./COMPILED_360
+          retention-days: 30
