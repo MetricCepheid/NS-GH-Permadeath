@@ -82,7 +82,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GH3-PS3-Permadeath
-          path: ./COMPILED_PS3/GH3PERMA.pkg
+          path: ./COMPILED_PS3
           retention-days: 30
 
 
