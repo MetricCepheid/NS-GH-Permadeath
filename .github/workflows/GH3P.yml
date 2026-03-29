@@ -21,27 +21,27 @@ jobs:
         run: |
           curl -LO https://github.com/AddyMills/Honeycomb-CLI/releases/download/20251010/Honeycomb-Linux-x64-2025-10-10_Release.7z
           7z x Honeycomb-Linux-x64-2025-10-10_Release.7z
+      
+      - name: move files in a separate command strip thingy majig
+        run: cp -R GH3/bgh3-permadeath/DATA COMPILED_PC/DATA
 
       - name: Honeycomb compile
         run: |
           cd Honeycomb-Linux-x64
           chmod u+x ./Honeycomb
-          ./Honeycomb pak compile '../GH3/dl2000000001' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_text' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_text_f' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_text_g' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_text_i' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/dl2000000001_text_s' -g GH3 -c PC -o '../COMPILED_PC/Permadeath'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch' -g GH3 -c PC -o '../COMPILED_PC'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text' -g GH3 -c PC -o '../COMPILED_PC'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_f' -g GH3 -c PC -o '../COMPILED_PC'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '../COMPILED_PC'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '../COMPILED_PC'
-          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '../COMPILED_PC'
-
-      - name: move files in a separate command strip thingy majig
-        run: cp -R GH3/bgh3-permadeath/DATA COMPILED_PC/DATA
+          ./Honeycomb pak compile '../GH3/dl2000000001' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_f' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_g' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_i' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/dl2000000001_text_s' -g GH3 -c PC -o '.../COMPILED_PC/DATA/Permadeath'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_f' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
+          ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '.../COMPILED_PC/DATA'
       
       - name: Upload release attachment
         uses: actions/upload-artifact@v4
