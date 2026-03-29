@@ -23,7 +23,7 @@ global_content_index_pak_language = 'none'
 
 script downloads_enumcontent 
 	mark_unsafe_for_shutdown
-	text_base = '../gh3ml/mods/permadeath/dl2000000001%s.pak'
+	text_base = './permadeath/dl2000000001%s.pak'
 	if english
 		formattext textname = textpak <text_base> s = '_text'
 	elseif french
@@ -36,8 +36,8 @@ script downloads_enumcontent
 		formattext textname = textpak <text_base> s = '_text_s'
 	endif
 	loadpak <textpak>
-	loadpak \{'../gh3ml/mods/permadeath/dl2000000001.pak'}
-	loadpak \{'../gh3ml/mods/permadeath/dl2000000001_pc.pak'}
+	loadpak \{'./permadeath/dl2000000001.pak'}
+	loadpak \{'./permadeath/dl2000000001_pc.pak'}
 	if enumcontentfiles \{download
 			dofiles}
 		begin
