@@ -63,14 +63,13 @@ jobs:
       - name: Packages
         run: |
           sudo dpkg --add-architecture i386
-          sudo apt install p7zip-full wine
+          sudo apt install p7zip-full
       
       - name: Pull Honeycomb-CLI && onyx-cli binary package
         run: |
           curl -LO https://github.com/AddyMills/Honeycomb-CLI/releases/download/20251010/Honeycomb-Linux-x64-2025-10-10_Release.7z
-          curl -LO https://github.com/mtolly/onyx/releases/download/20251011/onyx-command-line-20251011-windows-x64.zip
+          curl -LO https://github.com/mtolly/onyx/releases/download/20251011/onyx-20251011-linux-x64.AppImage
           7z x Honeycomb-Linux-x64-2025-10-10_Release.7z
-          7z x onyx-command-line-20251011-windows-x64.zip
 
       - name: Honeycomb compile
         run: |
@@ -81,9 +80,10 @@ jobs:
           ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PS3 && mv '../GH3/DL2000000001_PC.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001_PC.PAK.PS3'
 
       - name: onyx-cli compile
-        run: | 
-          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath/scripts
-          wine cmd /c gh3-ps3.bat
+        run: |
+          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath
+          chmod u+x ./onyx-20251011-linux-x64.AppImage
+          onyx-20251011-linux-x64.AppImage pkg UP0010-BLUS30074_00-GH3PERMDETH ./GH3/PKG --to ./COMPILED_PS3/GH3-PS3-PERMADEATH-V1.pkg
 
       - name: Upload release attachment
         uses: actions/upload-artifact@v4

@@ -1594,10 +1594,9 @@ script setup_user_option_tags
 				sfx_volume = 11
 				lefty_flip_p1 = 0
 				lefty_flip_p2 = 0
-				lag_calibration = 0.0
 				lag_audio = 0.0
 				lag_video = 0.0
-				autosave = 1
+				autosave = 0
 				resting_whammy_position_device_0 = -0.76
 				resting_whammy_position_device_1 = -0.76
 				resting_whammy_position_device_2 = -0.76
@@ -1635,7 +1634,7 @@ script setup_user_option_tags
 				lefty_flip_p1 = 0
 				lefty_flip_p2 = 0
 				lag_calibration = 0.0
-				autosave = 1
+				autosave = 0
 				resting_whammy_position_device_0 = -0.76
 				resting_whammy_position_device_1 = -0.76
 				resting_whammy_position_device_2 = -0.76
