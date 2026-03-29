@@ -83,7 +83,7 @@ jobs:
         run: |
           cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath
           chmod u+x ./onyx-20251011-linux-x64.AppImage
-          onyx-20251011-linux-x64.AppImage pkg UP0010-BLUS30074_00-GH3PERMDETH ./GH3/PKG --to ./COMPILED_PS3/GH3-PS3-PERMADEATH-V1.pkg
+          ./onyx-20251011-linux-x64.AppImage pkg UP0010-BLUS30074_00-GH3PERMDETH ./GH3/PKG --to ./COMPILED_PS3/GH3-PS3-PERMADEATH-V1.pkg
 
       - name: Upload release attachment
         uses: actions/upload-artifact@v4
