@@ -51,17 +51,17 @@ jobs:
 
       - name: Comment
         run: echo GH3-PS3 will eventually go here when I can get it to build properly.
- #     - name: Packages
- #       run: |
- #         sudo dpkg --add-architecture i386
- #         sudo apt install p7zip-full wine
+      - name: Packages
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt install p7zip-full wine
       
- #     - name: Pull Honeycomb-CLI && onyx-cli binary package
- #       run: |
- #         curl -LO https://github.com/AddyMills/Honeycomb-CLI/releases/download/20251010/Honeycomb-Linux-x64-2025-10-10_Release.7z
- #         curl -LO https://github.com/mtolly/onyx/releases/download/20251011/onyx-command-line-20251011-windows-x64.zip
- #         7z x Honeycomb-Linux-x64-2025-10-10_Release.7z
- #         7z x onyx-command-line-20251011-windows-x64.zip
+      - name: Pull Honeycomb-CLI && onyx-cli binary package
+        run: |
+          curl -LO https://github.com/AddyMills/Honeycomb-CLI/releases/download/20251010/Honeycomb-Linux-x64-2025-10-10_Release.7z
+          curl -LO https://github.com/mtolly/onyx/releases/download/20251011/onyx-command-line-20251011-windows-x64.zip
+          7z x Honeycomb-Linux-x64-2025-10-10_Release.7z
+          7z x onyx-command-line-20251011-windows-x64.zip
 
  #     - name: Honeycomb compile
  #       run: |
@@ -72,17 +72,17 @@ jobs:
  #         ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PS3 && mv '../GH3/DL2000000001_PC.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001_PC.PAK.PS3'
  #         ./Honeycomb pak compile '../GH3/dl2000000001_text' -g GH3 -c PS3 && mv '../GH3/DL2000000001_TEXT.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001.PAK.PS3'
 
-  #    - name: onyx-cli compile
-  #      run: | 
-  #        cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath/scripts
-  #        wine cmd /c gh3-ps3.bat
+      - name: onyx-cli compile
+        run: | 
+          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath/scripts
+          wine cmd /c gh3-ps3.bat
 
-  #    - name: Upload release attachment
-  #      uses: actions/upload-artifact@v4
-  #      with:
-  #        name: GH3-PS3-Permadeath
-  #        path: ./COMPILED_PS3/GH3PERMA.pkg
-  #        retention-days: 30
+      - name: Upload release attachment
+        uses: actions/upload-artifact@v4
+        with:
+          name: GH3-PS3-Permadeath
+          path: ./COMPILED_PS3/GH3PERMA.pkg
+          retention-days: 30
 
 
   xthreesixty:
