@@ -1618,14 +1618,13 @@ script setup_user_option_tags
 				online_num_songs = 0
 				online_tie_breaker = 0
 				online_highway = 0
-				unlock_cheat_airguitar = 1
-				unlock_cheat_performancemode = 1
-				unlock_cheat_hyperspeed = 1
-				unlock_cheat_nofail = 0
-				unlock_cheat_easyexpert = 0
-				unlock_cheat_precisionmode = 0
-				unlock_cheat_largegems = 1
-				unlock_cheat_bretmichaels = 1
+				unlock_Cheat_AirGuitar = 1
+				unlock_Cheat_PerformanceMode = 1
+				unlock_Cheat_Hyperspeed = 1
+				unlock_Cheat_NoFail = 0
+				unlock_Cheat_EasyExpert = 0
+				unlock_Cheat_PrecisionMode = 1
+				unlock_Cheat_BretMichaels = 1
 			}}
 	else
 		SetGlobalTags \{user_options
@@ -1657,14 +1656,13 @@ script setup_user_option_tags
 				online_num_songs = 0
 				online_tie_breaker = 0
 				online_highway = 0
-				unlock_cheat_airguitar = 1
-				unlock_cheat_performancemode = 1
-				unlock_cheat_hyperspeed = 1
-				unlock_cheat_nofail = 0
-				unlock_cheat_easyexpert = 0
-				unlock_cheat_precisionmode = 0
-				unlock_cheat_largegems = 1
-				unlock_cheat_bretmichaels = 1
+				unlock_Cheat_AirGuitar = 1
+				unlock_Cheat_PerformanceMode = 1
+				unlock_Cheat_Hyperspeed = 1
+				unlock_Cheat_NoFail = 0
+				unlock_Cheat_EasyExpert = 0
+				unlock_Cheat_PrecisionMode = 1
+				unlock_Cheat_BretMichaels = 1
 			}}
 	endif
 endscript
