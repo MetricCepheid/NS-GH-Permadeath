@@ -64,14 +64,13 @@ jobs:
           7z x onyx-command-line-20251011-windows-x64.zip
           mkdir COMPILED_PS3
 
- #     - name: Honeycomb compile
- #       run: |
- #         mkdir COMPILED_PS3
- #         cd Honeycomb-Linux-x64
- #         chmod u+x ./Honeycomb
- #         ./Honeycomb pak compile '../GH3/dl2000000001' -g GH3 -c PS3 && mv '../GH3/DL2000000001.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001.PAK.PS3'
- #         ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PS3 && mv '../GH3/DL2000000001_PC.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001_PC.PAK.PS3'
- #         ./Honeycomb pak compile '../GH3/dl2000000001_text' -g GH3 -c PS3 && mv '../GH3/DL2000000001_TEXT.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001.PAK.PS3'
+      - name: Honeycomb compile
+        run: |
+          mkdir COMPILED_PS3
+          cd Honeycomb-Linux-x64
+          chmod u+x ./Honeycomb
+          ./Honeycomb pak compile '../GH3/dl2000000001' -g GH3 -c PS3 && mv '../GH3/DL2000000001.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001.PAK.PS3'
+          ./Honeycomb pak compile '../GH3/dl2000000001_pc' -g GH3 -c PS3 && mv '../GH3/DL2000000001_PC.PAK.PS3' '../GH3/PKG/USRDIR/GH3 PERMADEATH PATCH/DL2000000001_PC.PAK.PS3'
 
       - name: onyx-cli compile
         run: | 
