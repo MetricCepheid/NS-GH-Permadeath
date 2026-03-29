@@ -103,7 +103,7 @@ jobs:
 
       - name: Packages
         run: |
-          sudo apt install p7zip-full libfuse2
+          sudo apt install p7zip-full libfuse2 wine
       
       - name: Pull Honeycomb-CLI && onyx-cli binary package
         run: |
