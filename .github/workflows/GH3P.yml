@@ -39,7 +39,7 @@ jobs:
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_g' -g GH3 -c PC -o '../COMPILED_PC'
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_i' -g GH3 -c PC -o '../COMPILED_PC'
           ./Honeycomb pak compile '../GH3/bgh3-permadeath/patch_text_s' -g GH3 -c PC -o '../COMPILED_PC'
-          cd ..
+          cd ~/work/NS-GH-Permadeath/NS-GH-Permadeath
           mv GH3/bgh3-permadeath/DATA COMPILED_PC
       
       - name: Upload release attachment
