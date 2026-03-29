@@ -33,14 +33,14 @@ script setup_user_option_tags
 				online_num_songs = 0
 				online_tie_breaker = 0
 				online_highway = 0
-				unlock_cheat_airguitar = 0
-				unlock_cheat_performancemode = 0
-				unlock_cheat_hyperspeed = 0
+				unlock_cheat_airguitar = 1
+				unlock_cheat_performancemode = 1
+				unlock_cheat_hyperspeed = 1
 				unlock_cheat_nofail = 0
 				unlock_cheat_easyexpert = 0
 				unlock_cheat_precisionmode = 0
-				unlock_cheat_largegems = 0
-				unlock_cheat_bretmichaels = 0
+				unlock_cheat_largegems = 1
+				unlock_cheat_bretmichaels = 1
 			}}
 	else
 		setglobaltags \{user_options

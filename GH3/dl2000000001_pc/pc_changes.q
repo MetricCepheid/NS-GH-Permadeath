@@ -731,7 +731,6 @@ script create_main_menu
 	if ($hs_first_time = 1)
 		setglobaltags {user_options
 			params = {
-				lag_calibration = ($calibration_val)
 				lefty_flip_p1 = ($lefty_flip_p1_val)
 				lefty_flip_p2 = ($lefty_flip_p2_val)
 			}

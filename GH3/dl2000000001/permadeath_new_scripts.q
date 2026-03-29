@@ -44,6 +44,19 @@ star_power_pos_2 = -1.0
 
 
 script save_hs_and_lag_settings
+	if iswinport
+		change songs_practiced = ($empty_array)
+		GetGlobalTags \{user_options}
+		change lefty_flip_p1_val = <lefty_flip_p1>
+		change lefty_flip_p2_val = <lefty_flip_p2>
+		change hyperspeed_setting_val = ($cheat_hyperspeed)
+		change whammy_cal_val_1 = ($player1_status.resting_whammy_position)
+		change whammy_cal_val_2 = ($player2_status.resting_whammy_position)
+		change star_power_pos_1 = ($player1_status.star_tilt_threshold)
+		change star_power_pos_2 = ($player2_status.star_tilt_threshold)
+		change \{hs_first_time = 1}
+		change \{progression_pop_count = 0}
+	else
 		change songs_practiced = ($empty_array)
 		GetGlobalTags \{user_options}
 		change calibration_val = <lag_calibration>
@@ -56,6 +69,7 @@ script save_hs_and_lag_settings
 		change star_power_pos_2 = ($player2_status.star_tilt_threshold)
 		change \{hs_first_time = 1}
 		change \{progression_pop_count = 0}
+	endif
 endscript
 
 script create_songs_practiced_text 
